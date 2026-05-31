@@ -7,6 +7,9 @@ screen = pygame.display.set_mode((800, 600))
 player_x = 380
 player_y = 520
 
+enemy_x = 400
+enemy_y = 0
+
 pygame.display.set_caption("Game 01 Dodge")
 
 running = True
@@ -26,12 +29,20 @@ while running:
     if keys[pygame.K_RIGHT]:
         player_x += 0.5
 
+    enemy_y += 0.5
+
     screen.fill((0, 0, 0))
 
     pygame.draw.rect(
         screen,
         (255, 255, 255),
         (player_x, player_y, 40, 40)
+    )
+
+    pygame.draw.rect(
+        screen,
+        (255, 0, 0),
+        (enemy_x, enemy_y, 40, 40)
     )
 
     pygame.display.flip()
