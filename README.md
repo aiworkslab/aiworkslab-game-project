@@ -1,6 +1,14 @@
 # aiworkslab-game-project
 Game Development Learning with Python and Pygame  PythonとPygameを使ったゲーム開発学習記録です。  AI Works Labプロジェクトの一環として、 小さなゲームを作りながら学習しています。
 
+## 長期目標
+
+- スマホゲーム公開
+- PCゲーム公開
+- 個人開発作品を増やす
+- 広告収益を得る
+- AI Works Labを成長させる
+
 ## 2026-05-29
 
 ### 完了
