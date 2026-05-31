@@ -9,6 +9,11 @@ Game Development Learning with Python and Pygame  PythonとPygameを使ったゲ
 - 広告収益を得る
 - AI Works Labを成長させる
 
+## AI Works Lab
+
+AI・プログラミング・ゲーム開発を通じて、
+個人開発作品を増やしながら収益化を目指すプロジェクト。
+
 ## 2026-05-29
 
 ### 完了
