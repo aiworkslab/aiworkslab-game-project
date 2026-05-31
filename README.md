@@ -7,6 +7,7 @@ Game Development Learning with Python and Pygame  PythonとPygameを使ったゲ
 - PCゲーム公開
 - 個人開発作品を増やす
 - 広告収益を得る
+- 個人開発で収益化を経験する
 - AI Works Labを成長させる
 
 ## AI Works Lab
