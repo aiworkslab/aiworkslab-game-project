@@ -1,5 +1,6 @@
 import pygame
 import sys
+import random
 
 pygame.init()
 
@@ -30,6 +31,10 @@ while running:
         player_x += 0.5
 
     enemy_y += 0.5
+    
+    if enemy_y > 600:
+        enemy_y = 0
+        enemy_x = random.randint(0, 760)
 
     screen.fill((0, 0, 0))
 
