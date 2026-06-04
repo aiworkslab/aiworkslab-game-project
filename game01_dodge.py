@@ -36,6 +36,15 @@ while running:
         enemy_y = 0
         enemy_x = random.randint(0, 760)
 
+    if (
+        player_x < enemy_x + 40
+        and player_x + 40 > enemy_x
+        and player_y < enemy_y + 40
+        and player_y + 40 > enemy_y
+    ):
+        print("ゲームオーバー")
+        running = False
+
     screen.fill((0, 0, 0))
 
     pygame.draw.rect(
