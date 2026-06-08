@@ -13,7 +13,11 @@ enemy_y = 0
 
 pygame.display.set_caption("Game 01 Dodge")
 
+font = pygame.font.SysFont(None, 72)
+
 running = True
+
+game_over = False
 
 while running:
 
@@ -24,13 +28,15 @@ while running:
     
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_LEFT]:
-        player_x -= 0.5
+    if not game_over:
+        if keys[pygame.K_LEFT]:
+            player_x -= 0.5
 
-    if keys[pygame.K_RIGHT]:
-        player_x += 0.5
+        if keys[pygame.K_RIGHT]:
+            player_x += 0.5
 
-    enemy_y += 0.5
+    if not game_over:
+        enemy_y += 0.5
     
     if enemy_y > 600:
         enemy_y = 0
@@ -43,9 +49,13 @@ while running:
         and player_y + 40 > enemy_y
     ):
         print("ゲームオーバー")
-        running = False
+        game_over = True
 
     screen.fill((0, 0, 0))
+
+    if game_over:
+        text = font.render("GAME OVER", True, (255,255,255))
+        screen.blit(text, (220, 250))
 
     pygame.draw.rect(
         screen,
