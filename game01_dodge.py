@@ -10,6 +10,7 @@ player_y = 520
 
 enemy_x = 400
 enemy_y = 0
+score = 0
 
 pygame.display.set_caption("Game 01 Dodge")
 
@@ -37,6 +38,7 @@ while running:
 
     if not game_over:
         enemy_y += 0.5
+        score += 1
     
     if enemy_y > 600:
         enemy_y = 0
@@ -52,6 +54,14 @@ while running:
         game_over = True
 
     screen.fill((0, 0, 0))
+
+    score_text = font.render(
+        f"SCORE : {score}",
+        True,
+        (255, 255, 255)
+    )
+
+    screen.blit(score_text, (10, 10))
 
     if game_over:
         text = font.render("GAME OVER", True, (255,255,255))
