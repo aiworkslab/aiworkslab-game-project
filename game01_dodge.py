@@ -38,8 +38,8 @@ while running:
 
     if not game_over:
         enemy_y += 0.5
-        score += 1
-    
+        score += 0.01
+        
     if enemy_y > 600:
         enemy_y = 0
         enemy_x = random.randint(0, 760)
@@ -56,7 +56,7 @@ while running:
     screen.fill((0, 0, 0))
 
     score_text = font.render(
-        f"SCORE : {score}",
+        f"SCORE : {int(score)}",
         True,
         (255, 255, 255)
     )
