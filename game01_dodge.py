@@ -26,6 +26,15 @@ while running:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_r and game_over:
+                player_x == 300
+                player_y == 520
+                enemy_x = random.randint(0, 760)
+                enemy_y = 0
+                score = 0
+                game_over = False
     
     keys = pygame.key.get_pressed()
 
