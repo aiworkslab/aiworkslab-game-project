@@ -29,8 +29,8 @@ while running:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r and game_over:
-                player_x == 300
-                player_y == 520
+                player_x = 300
+                player_y = 520
                 enemy_x = random.randint(0, 760)
                 enemy_y = 0
                 score = 0
@@ -75,6 +75,14 @@ while running:
     if game_over:
         text = font.render("GAME OVER", True, (255,255,255))
         screen.blit(text, (220, 250))
+
+        restart_text = font.render(
+            "Press R to Restart",
+            True,
+            (255, 255, 255)
+        )
+
+        screen.blit(restart_text, (150, 330))
 
     pygame.draw.rect(
         screen,
