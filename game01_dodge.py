@@ -51,6 +51,9 @@ while running:
         if keys[pygame.K_RIGHT]:
             player_x += 0.5
 
+        # プレイヤーの左端が0未満、右端が画面幅800を超えないようにする
+        player_x = max(0, min(player_x, 760))
+
     if not game_over:
         # ゲーム中は敵2体を同じ速さで下に動かす
         enemy1_y += 0.5
