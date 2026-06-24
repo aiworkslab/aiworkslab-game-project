@@ -14,6 +14,8 @@ enemy1_y = 0
 enemy2_x = 560
 enemy2_y = -300
 score = 0
+# 最高スコアは、ゲームを起動している間だけ覚えておく
+best_score = 0
 
 pygame.display.set_caption("Game 01 Dodge")
 
@@ -68,6 +70,10 @@ while running:
         enemy2_y += 0.5
         score += 0.01
 
+        # 今のスコアが最高スコアを超えたら、最高スコアを更新する
+        if score > best_score:
+            best_score = score
+
         # 画面の下まで進んだ敵は、横位置を変えて上から落とし直す
         if enemy1_y > 600:
             enemy1_y = 0
@@ -115,6 +121,14 @@ while running:
         )
 
         screen.blit(score_text, (10, 10))
+
+        best_score_text = font.render(
+            f"BEST : {int(best_score)}",
+            True,
+            (255, 255, 255)
+        )
+
+        screen.blit(best_score_text, (10, 80))
 
         if game_over:
             text = font.render("GAME OVER", True, (255,255,255))
